@@ -40,7 +40,8 @@ class PhotosController < ApplicationController
     n.caption = params[:the_caption]
     n.source = params[:the_source]
     n.save
-    render("update_photo.html.erb")
+    #render("update_photo.html.erb")
+    redirect_to("/photos/#{n.id}")
   end
 
 end
